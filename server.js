@@ -11,11 +11,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views/Login.html'));
 });
-app.get('/about', function(req, res){
-  res.sendFile(path.join(__dirname, 'views/about.html'));
+app.get('/register', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/reg.html'));
 });
-app.get('*', function(req, res){
-  res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
+app.get('/login', function(req, res){
+  res.status(404).sendFile(path.join(__dirname, 'views/log.html'));
 });
 //express server listen
 var server = app.listen(app.get('port'), function(){
